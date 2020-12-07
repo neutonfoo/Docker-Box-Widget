@@ -93,16 +93,13 @@ export const updateState = (event, previousState) => {
 
       // console.log(created);
     } else if (lineParts.length === 7) {
-      // Has PORTS
-      // [
-      //   containerId,
-      //   image,
-      //   command,
-      //   created,
-      //   status,
-      //   ports,
-      //   containerName,
-      // ] = lineParts;
+      containerId = lineParts[0];
+      image = lineParts[1];
+      command = lineParts[2];
+      containerCreated = lineParts[3];
+      status = lineParts[4];
+      ports = lineParts[5];
+      containerName = lineParts[6];
     }
 
     containers.push({
